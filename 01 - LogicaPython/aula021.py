@@ -3,7 +3,7 @@ senha = input("Senha: ")
 
 senha_permitida = "123456"
 
-if entrada == "E" and senha == senha_permitida:
+if entrada == "E" or "e" and senha == senha_permitida:
     print("Entrou")
 else:
     print("Sair")
