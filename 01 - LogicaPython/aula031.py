@@ -1,7 +1,16 @@
-nome = "Nicolas"
-nome2 = "Nicolas"
+condicao = True
+passou_no_if = None
 
-print(id(nome))
-print(id(nome2))
+if condicao:
+    passou_no_if = True
+    print("Passou no if")
+else:
+    print("Não passou no if")
 
-# Como o Python busca os elementos na memória
+if passou_no_if is None:
+    print("Ele não passou no IF lá de cima")
+else:
+    print("Ele passou kkkkkk aula do c@r%l*h0")
+
+
+print(passou_no_if is None)
