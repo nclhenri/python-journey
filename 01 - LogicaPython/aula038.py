@@ -1,5 +1,5 @@
-quantidade_linhas = 5
-quantidade_colunas = 5
+quantidade_linhas = 6
+quantidade_colunas = 6
 
 linha = 1
 
