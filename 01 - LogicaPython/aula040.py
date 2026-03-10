@@ -14,6 +14,7 @@ try:
 
         if operadores_permitidos not in opcao_escolhida:
             print("Você digitou um operador inválido!")
+            continue
 
         if opcao_escolhida == "+":
             resultado = int_n1 + int_n2
