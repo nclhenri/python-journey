@@ -1,5 +1,5 @@
 tentativas = 0
-palavra_secreta = "Computador"
+palavra_secreta = "ola"
 letra_acertada = ""
 tentativa = input("Digite seu primeiro chute:")
 
@@ -9,7 +9,8 @@ while tentativa != palavra_secreta:
         tentativas += 1
         tentativa = input("Tente outra vez!:")
         continue
-    elif tentativa in palavra_secreta:
+    
+    if tentativa in palavra_secreta:
         print(f"A letra '{tentativa}' contêm na frase.")
         letra_acertada += tentativa
     else:
