@@ -1,4 +1,5 @@
 lista = ["Maria", "Helena", "Luiz"]
+indices = range(len(lista))
 
-for item in lista:
-    print(item)
+for posicao in indices:
+    print(posicao, lista[posicao])
