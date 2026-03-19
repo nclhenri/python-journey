@@ -1,5 +1,4 @@
-lista = ["Maria", "Helena", "Luiz"]
-indices = range(len(lista))
+carros = ["Camaro", "Omega", "Corsa"]
 
-for posicao in indices:
-    print(posicao, lista[posicao])
+for carro in carros:
+    print(carro)
