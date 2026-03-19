@@ -3,3 +3,4 @@ print(lista)
 print(lista[0])
 lista[0] = "Henrique"
 print(lista[0])
+print(lista)
