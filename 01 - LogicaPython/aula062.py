@@ -17,6 +17,7 @@ for numero in cpf_9:
 multiplicar_resultado = soma_resultado * 10
 resto = multiplicar_resultado % 11
 primeiro_digito = 0 if resto > 9 else resto
+str_primeiro_digito = str(primeiro_digito)
 
 
 print(f"O primeiro dígito do CPF é: {primeiro_digito}")
@@ -38,5 +39,13 @@ for numero in cpf_10:
 multiplicar_resultado = soma_resultado * 10
 resto = multiplicar_resultado % 11
 segundo_digito = 0 if resto > 9 else resto
+str_segundo_digito = str(segundo_digito)
 
 print(f"O Segundo dígito do CPF é: {segundo_digito}")
+
+print(cpf_tratado[9])
+
+if (cpf_tratado[9] == str_primeiro_digito and cpf_tratado[10] == str_segundo_digito):
+    print("O CPF é válido!")
+else:
+    print("O CPF NÃO é válido!")
