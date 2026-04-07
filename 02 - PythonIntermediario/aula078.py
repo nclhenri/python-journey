@@ -1,6 +1,3 @@
-# Exercício - sistema de perguntas e respostas
-
-
 perguntas = [
     {
         'Pergunta': 'Quanto é 2+2?',
@@ -19,39 +16,33 @@ perguntas = [
     },
 ]
 
-qtd_acertos = 0
+quantidade_acertos = 0
+
 for pergunta in perguntas:
-    print('Pergunta:', pergunta['Pergunta'])
+    print(pergunta["Pergunta"])
     print()
 
-    opcoes = pergunta['Opções']
+    opcoes = pergunta["Opções"]
     for i, opcao in enumerate(opcoes):
-        print(f'{i})', opcao)
+        print(f"{i}) {opcao}")
     print()
 
-    escolha = input('Escolha uma opção: ')
+    escolha = input("Qual a sua escolha?: ")
 
     acertou = False
-    escolha_int = None
-    qtd_opcoes = len(opcoes)
+    quantidade_opcoes = len(opcoes)
+    int_escolha = int(escolha)
 
     if escolha.isdigit():
-        escolha_int = int(escolha)
-
-    if escolha_int is not None:
-        if escolha_int >= 0 and escolha_int < qtd_opcoes:
-            if opcoes[escolha_int] == pergunta['Resposta']:
+        int_escolha = int(escolha)
+        if (int_escolha >=0) and (int_escolha <= quantidade_opcoes):
+            if opcoes[int_escolha] == pergunta["Resposta"]:
                 acertou = True
-
-    print()
+    
     if acertou:
-        qtd_acertos += 1
-        print('Acertou 👍')
+        quantidade_acertos += 1
+        print("Você acertou! :D ")
     else:
-        print('Errou ❌')
+        print("Você errou! :(")
 
-    print()
-
-
-print('Você acertou', qtd_acertos)
-print('de', len(perguntas), 'perguntas.')
+print("Você acertou", quantidade_acertos, "de", len(perguntas))
