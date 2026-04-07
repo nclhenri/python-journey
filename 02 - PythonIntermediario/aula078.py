@@ -23,25 +23,26 @@ for pergunta in perguntas:
     print()
 
     opcoes = pergunta["Opções"]
+
     for i, opcao in enumerate(opcoes):
         print(f"{i}) {opcao}")
     print()
 
-    escolha = input("Qual a sua escolha?: ")
+    escolha = input("Qual é a sua escolha?: ")
 
     acertou = False
     quantidade_opcoes = len(opcoes)
-    int_escolha = int(escolha)
+    int_escolha = None
 
     if escolha.isdigit():
         int_escolha = int(escolha)
-        if (int_escolha >=0) and (int_escolha <= quantidade_opcoes):
-            if opcoes[int_escolha] == pergunta["Resposta"]:
+        if (int_escolha >= 0) and (int_escolha <= quantidade_opcoes):
+            if (opcoes[int_escolha]) == (pergunta["Resposta"]):
                 acertou = True
     
     if acertou:
         quantidade_acertos += 1
-        print("Você acertou! :D ")
+        print("Você acertou! :D")
     else:
         print("Você errou! :(")
 
